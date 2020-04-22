@@ -1,0 +1,45 @@
+﻿{
+  "orderCode": "01265701384162",
+  "customerName": "test",
+  "customerPwd": "ZTO123",
+  "shipperCode": "ZTO",
+  "payType": 1,
+  "monthCode": "7551234567",
+  "expType": "1",
+  "cost": 1,
+  "otherCost": 1,
+  "sender": {
+    "company": "lv",
+    "name": "taylor",
+    "mobile": "15018442396",
+    "provinceName": "上海",
+    "cityName": " 上 海 市 ",
+    "expAreaName": "青浦区",
+    "address": "明珠路"
+  },
+  "receiver": {
+    "company": "gccui",
+    "name": "yann",
+    "mobile": "15018442396",
+    "provinceName": "北京",
+    "cityName": " 北京市 ",
+    "expAreaName": "朝阳区",
+    "address": "三里屯街道"
+  },
+  "commodity": [
+    {
+      "goodsName": "鞋子",
+      "goodsQuantity": 1,
+      "goodsWeight": 1
+    },
+    {
+      "goodsName": "衣服",
+      "goodsQuantity": 1,
+      "goodsWeight": 1
+    }
+  ],
+  "weight": 1,
+  "quantity": 1,
+  "volume": 0,
+  "remark": "小心轻放"
+}

@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Compeng.Rpc.Core\Compeng.Rpc.Core.csproj" />
+      <ProjectReference Include="..\WLYD.Rpc.Core\Compeng.Rpc.Core.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Grpc.Core" Version="2.26.0" />
+      <PackageReference Include="nacos-sdk-csharp-unofficial" Version="0.2.1" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,138 @@
+﻿syntax = "proto3";
+package Compeng.PEQP;
+
+service CreateOrder {
+    rpc Create (CreateOrderRequest) returns (CreateOrderResponse) {}
+}
+//创建电子面单请求类
+message CreateOrderRequest {
+    string Callback = 1; //用户自定义回传字段
+    string MemberID = 2; //ERP 系统、电商平台等系统或平台类型用户的会员 ID 或店铺账号等唯一性标识，用于区分其用户
+    string CustomerName = 3; // ShipperCode为SF可不填,电子面单客户账号
+    string CustomerPwd = 4; // ShipperCode为SF可不填,电子面单客户密码
+    string SendSite=5;//网点名称
+    string MonthCode=6;//ShipperCode为SF,月结卡号必填
+    string CustomArea=7;//商家自定义区域
+    string WareHouseID=8;//发货仓编码(ShipperCode 为JDKY 时必填)
+    int32 TransType=9;//运输方式1-陆运，2-空运，不填默认为1
+    string ShipperCode=10;// 快递公司编码必填,填写范围:YTO(圆通),SF(顺丰),STO(申通),ZTO(中通)
+    string LogisticCode=11;//快递单号(仅宅急送可用)
+    string ThOrderCode=12;//第三方订单号(ShipperCode 为 JD 且ExpType 为 1 时必填)
+    string OrderCode=13;//订单编号（自定义，不可重复）
+    int32 PayType=14;//运费支付方式：1-现付，2-到付，3-月结，4-第三方付(仅 SF、KYSY 支持)
+    string ExpType=15;// 快递公司业务类型
+    int32 IsReturnSignBill=16;//是否要求签回单 0-不要求，1-要求
+    string OperateRequire=17;//签回单操作要求(如：签名、盖章、身份证复印件等)
+    string Cost=18;//快递运费 类型：decimal
+    string OtherCost=19;//其他费用 类型：decimal
+    ExpressReceiver Receiver=20;//收件人信息
+    ExpressSender Sender=21;//发件人信息
+    int32 IsNotice=22;//是否通知快递员上门揽件 0-通知，1-不通知，不填则默认为 1
+    string StartDate=23;//上门揽件时间段，格式：YYYY-MM-DD HH24:MM:SS
+    string EndDate=24;//上门揽件时间段，格式：YYYY-MM-DD HH24:MM:SS
+    string Weight=25;//包裹重量 类型：decimal
+    int32 Quantity=26;//包裹数
+    string Volume=27;//体积 类型：decimal
+    string Remark=28;//备注
+    repeated ExpressAddService AddService=29;//增值服务
+    repeated ExpressCommodity Commodity=30;//包裹体积
+
+
+}
+//收件人信息
+message ExpressReceiver{
+    string Company=1;//收件人公司
+    string Name=2;//收件人姓名
+    string Tel=3;//收件人电话
+    string Mobile=4;//收件人电话
+    string PostCode=5;//收件地邮编（(ShipperCode 为EMS、YZPY、YZBK 时必填)）
+    string ProvinceName=6;//收件省
+    string CityName=7;//收件市
+    string ExpAreaName=8;//收件区/县
+    string Address=9;//收件人详细地址
+}
+
+//发件人信息
+message ExpressSender{
+    string Company=1;//发件人公司
+    string Name=2;//发件人姓名
+    string Tel=3;//发件人电话
+    string Mobile=4;//发件人电话
+    string PostCode=5;//发件人邮编(ShipperCode 为EMS、YZPY、YZBK 时必填)
+    string ProvinceName=6;//发件省
+    string CityName=7;//发件市
+    string ExpAreaName=8;//发件区/县
+    string Address=9;//发件人详细地址
+}
+
+//增值服务
+message ExpressAddService{
+    string Name=1;//增值服务名称
+    string Value=2;//增值服务值
+    string CustomerID=3;//客户标识
+}
+
+//商品信息
+message ExpressCommodity{
+    string GoodsName=1;//商品名称
+    string GoodsCode=2;//商品编码
+    int32 GoodsQuantity=3;//商品件数
+    string GoodsPrice=4;//商品价格 类型：decimal
+    string GoodsWeight=5;//商品重量 类型  deciaml
+    string GoodsDesc=6;//商品描述
+    string GoodsVol=7;//商品体积
+
+}
+//创建电子面单响应
+message CreateOrderResponse {
+    string EBusinessID = 1; //用户ID
+    string Reason = 2; //错误原因
+    bool Success = 3; //成功与否(true/false)
+    int32 ResultCode = 4; //返回编码,100成功,101缺少必要参数,102校验问题,103用户问题,104重复下单问题,105其他问题
+    string UniquerRequestNumber=5;//唯一标识
+    string EstimateDeliveryTime=6;//订单预计到货时间
+    ExpressOrder Order=7;//运单信息
+
+}
+//运单信息
+message ExpressOrder{
+
+    string OrderCode=1;//订单编号
+    string ShipperCode=2;//快递公司编码
+    string LogisticCode=3;//快递单号
+    string MarkDestination=4;//大头笔
+    string SignWaybillCode=5;//签回单号
+    string OriginCode=6;//始发地区域编码
+    string OriginName=7;//始发地/始发网点
+    string DestinationCode=8;//目的地区域编码
+    string DestinationName=9;//目的地/到达网点
+    string SortingCode=10;//分拣编码
+    string PackageCode=11;//集包编码
+    string PackageName=12;//集包地
+    string DestinationAllocationCentre=13;//目的地分拨
+    string QRcode=14;//二维码信息
+    ExpressShipperInfo ShipperInfo=15;//快递托运面单信息
+}
+// 快递托运面单信息
+message ExpressShipperInfo{
+    string LogisticCode=1;//快递单号
+    string OriginTransferCode=2;//原寄中转场
+    string OriginCityCode=3;//原寄地城市代码
+    string OriginDeptCode=4;//原寄地网点代码
+    string OriginTeamCode=5;//原寄地单元区域
+    string DestCityCode=6; //目的地城市代码
+    string DestDeptCode=7;//目的地网点代码
+    string DestDeptCodeMapping=8;//目的地网点代码映射码
+    string  DestTeamCode=9;//目的地单元区域
+    string DestTeamCodeMapping=10;// 目的地单元区域映射码
+    string DestTransferCode=11;//目的地中转场
+    string DestRouteLabel=12;//打单时的路由标签信息
+    string CodingMapping=13;//入港映射码
+    string CodingMappingOut=14;//出港映射码
+    string XbFlag=15;//XB 标志0:不需要打印1:需要打印
+    string PrintFlag=16;//打印标志
+    string TwoDimensionCode=17;//二维码
+    string ProCode =18;// 时效类型:值为二维码中的 K4
+    string PrintIcon=19;//打印图标
+    string AbFlag=20;//Ab 标
+}

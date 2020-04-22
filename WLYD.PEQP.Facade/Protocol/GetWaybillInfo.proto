@@ -1,0 +1,23 @@
+syntax = "proto3";
+package Compeng.PEQP;
+//运单信息查询
+service GetWaybillInfo {
+    rpc Get (GetWaybillInfoRequest) returns (GetWaybillInfoResponse) {
+    }
+}
+//运单信息查询请求类
+message GetWaybillInfoRequest {
+    string WaybillNo = 1; //顺丰运单号
+}
+//运单信息查询返回
+message GetWaybillInfoResponse {
+    string Reason = 1; //原因
+    bool Success = 2; //(成功true/失败false)
+    int32 ResultCode = 3; //返回编码,100成功,101缺少必要参数,102校验问题,103用户问题,104重复下单问题,105其他问题
+    string Sender = 4; //发货人姓名
+    string SenderPhone = 5; //发货人电话
+    string SenderMobile = 6; //发货人手机号
+    string Receiver = 7; //收货人姓名
+    string ReceiverPhone = 8; //收货人电话
+    string ReceiverMobile = 9; //收货人手机
+}

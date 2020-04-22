@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Compeng.PEQP.WebAPI</name>
+    </assembly>
+    <members>
+        <member name="T:Compeng.PEQP.WebAPI.Controllers.CancelOrderController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Compeng.PEQP.WebAPI.Controllers.CancelOrderController.CancelOrder(Compeng.PEQP.Dto.Express.Request.CancelOrderRequestDto)">
+            <summary>
+            取消订单接口
+            </summary>
+            <param name="request">取消订单请求实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Compeng.PEQP.WebAPI.Controllers.CreateOrderController.CreateElectronicSufaceOrder(Compeng.PEQP.Dto.Express.Request.ElectronicsurfaceRequestDto)">
+            <summary>
+            创建电子面单
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Compeng.PEQP.WebAPI.Controllers.GetChilrenOrderController.#ctor(Compeng.PEQP.GetChildOrder.GetChildOrderClient,AutoMapper.IMapper)">
+            <summary>
+            CTOR
+            </summary>
+            <param name="getChildOrderClient"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:Compeng.PEQP.WebAPI.Controllers.GetChilrenOrderController.QueryChildrenOrderLogisticNumber(Compeng.PEQP.Dto.Express.Request.ChildrenOrderLogisticsNoRequestDto)">
+            <summary>
+            取消订单接口
+            </summary>
+            <param name="request">取消订单请求实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:Compeng.PEQP.WebAPI.Controllers.GetWaybillInfoController.Get(Compeng.PEQP.Dto.Dtos.GetWaybillInfoRequestDto)">
+            <summary>
+            根据运单信息获取发货人信息，收货人信息等
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Compeng.PEQP.WebAPI.Controllers.LogisticsInfoController.#ctor(Compeng.PEQP.GetLogistics.GetLogisticsClient,AutoMapper.IMapper)">
+            <summary>
+            ctor
+            </summary>
+            <param name="getLogisticsClient">grpc客户端</param>
+            <param name="mapper">对象映射mapper</param>
+        </member>
+        <member name="M:Compeng.PEQP.WebAPI.Controllers.LogisticsInfoController.QueryLogisticInfo(Compeng.PEQP.Dto.Express.Request.LogisticInfoRequestDto)">
+             <summary>
+             物流轨迹查询
+             </summary>
+            <example>
+            圆通请求示例：
+            <code>
+            {
+                "OrderCode": "",
+                "ShipperCode": 0,
+                "LogisticCode": "YT2027195948210"
+            }
+             </code>
+            顺丰请求示例：注意此时CustomerName是必须的
+            <code>
+            {
+            "OrderCode": "",
+             "ShipperCode": 2,
+            "LogisticCode": "SF1014450814126",
+            "CustomerName":"11"
+            }
+            </code>
+            中通请求示例：
+             </example>
+             <param name="request">查询物流信息请求实体</param>
+             <returns></returns>
+        </member>
+        <member name="T:Compeng.PEQP.WebAPI.Extentions.ActionExecutingContextExtention">
+            <summary>
+            ActionExecutingContext扩展
+            </summary>
+        </member>
+        <member name="M:Compeng.PEQP.WebAPI.Extentions.ActionExecutingContextExtention.GetRequestHead(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext,Compeng.PEQP.Model.ExpressInferceModels.Response.ExpressBackResponse@)">
+            <summary>
+            获取head
+            </summary>
+            <param name="context"></param>
+            <param name="expressBackResponse"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Compeng.PEQP.WebAPI.Extentions.ActionExecutingContextExtention.GetRequestContent(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            获取客户端传入的原始内容
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Compeng.PEQP.WebAPI.Filters.AuthAttribute">
+            <summary>
+            接口签名认证
+            </summary>
+        </member>
+        <member name="M:Compeng.PEQP.WebAPI.Filters.AuthAttribute.GetDataSign(System.String,System.String)">
+            <summary>
+            生成数据前面
+            </summary>
+            <param name="appKey"></param>
+            <param name="requestData"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Compeng.PEQP.WebAPI.MappingProfile">
+            <summary>
+            dto--->grpc 对象映射
+            </summary>
+        </member>
+        <member name="T:Compeng.PEQP.WebAPI.ListToRepetedConverter">
+            <summary>
+            list -----> repeted
+            </summary>
+        </member>
+        <member name="T:Compeng.PEQP.WebAPI.NullableDecimalToStringConverter">
+            <summary>
+            可空decimal--->string converter
+            </summary>
+        </member>
+        <member name="T:Compeng.PEQP.WebAPI.StringToNullableDecimalConverter">
+            <summary>
+            字符串转可空decimal
+            </summary>
+        </member>
+        <member name="T:Compeng.PEQP.WebAPI.StringToExpressCompanyCodeConverter">
+            <summary>
+            字符串转快递公司编码枚举
+            </summary>
+        </member>
+    </members>
+</doc>

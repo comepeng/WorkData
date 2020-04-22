@@ -1,0 +1,22 @@
+﻿syntax = "proto3";
+package Compeng.PEQP;
+
+service GetChildOrder {
+    rpc GetChildOrderInfo (GetChildOrderRequest) returns (GetChildOrderResponse) {}
+}
+//获取子单请求类
+message GetChildOrderRequest {
+    string OrderCode = 1; //订单编号
+    string ShipperCode = 2; //快递公司编码
+    int32 ParcelQuantity=3;//新增加的包裹数，不超过100
+}
+//获取子单返回
+message GetChildOrderResponse {
+    string OrderCode=1;//客户订单号
+    string EBusinessID = 2; //用户I
+    string MainLogisticCode=3;//母运单号
+    string ZDLogisticCodes=4;//新增的子运单号，可以多个，以英文逗号隔开
+    string Reason = 5; //原因
+    bool Success = 6; //成功与否(true/false)
+    int32 ResultCode = 7; //返回编码,100成功,101缺少必要参数,102校验问题,103用户问题,104重复下单问题,105其他问题
+}

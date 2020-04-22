@@ -1,0 +1,31 @@
+﻿syntax = "proto3";
+package Compeng.PEQP;
+
+service GetLogistics {
+    rpc GetLogisticsInfo (GetLogisticsRequest) returns (GetLogisticsResponse) {}
+}
+//物流信息请求
+message GetLogisticsRequest {
+    string OrderCode = 1; //订单编号
+    string CustomerName = 2; //为 JD和SF时必填；ShipperCode 为其他快递时，不填
+    string ShipperCode=3;//快递公司编码必填,填写范围:YTO(圆通),SF(顺丰),STO(申通),ZTO(中通)
+    string LogisticCode=4;// 快递单号
+}
+//物流信息响应
+message GetLogisticsResponse {
+   string EBusinessID=1;//用户ID
+   string OrderCode=2;//订单编号
+   string ShipperCode=3;//快递公司编码
+   string LogisticCode=4;//快递单号
+   bool Success=5;//成功与否
+   string Reason=6;//失败原因
+   int32 ResultCode=7;//返回编码
+   repeated ExpressTraceInfo Traces=8;//物流轨迹详情  
+}
+message ExpressTraceInfo{
+    string AcceptTime=1;//轨迹发生时间
+    string AcceptStation=2;//轨迹描述
+    string Location=3;//当前城市
+    string Status=4;// 物流状态：无轨迹 = 0, 已揽收 = 1, 在途中 = 2, 签收 = 3, 问题件 = 4, 派件=202
+    string Remark=5;//备注
+}

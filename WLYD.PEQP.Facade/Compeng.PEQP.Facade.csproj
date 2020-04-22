@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+      <DocumentationFile>.\Compeng.PEQP.Facade.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="Protocol\CancelOrder.proto" />
+      <None Remove="Protocol\CreateOrder.proto" />
+      <None Remove="Protocol\GetChildrenOrder.proto" />
+      <None Remove="Protocol\LogisticsInfo.proto" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="9.0.0" />
+      <PackageReference Include="Google.Protobuf" Version="3.11.2" />
+      <PackageReference Include="Grpc" Version="2.26.0" />
+      <PackageReference Include="Grpc.Tools" Version="2.26.0">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Protobuf Include="Protocol\CancelOrder.proto" />
+      <Protobuf Include="Protocol\CreateOrder.proto">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Protobuf>
+      <Protobuf Include="Protocol\GetChildrenOrder.proto" />
+      <Protobuf Include="Protocol\GetWaybillInfo.proto">
+        <GrpcServices>Both</GrpcServices>
+        <Access>Public</Access>
+        <ProtoCompile>True</ProtoCompile>
+        <ProtoRoot></ProtoRoot>
+        <CompileOutputs>True</CompileOutputs>
+        <OutputDir>obj\Debug\netstandard2.0\</OutputDir>
+        <Generator>MSBuild:Compile</Generator>
+      </Protobuf>
+      <Protobuf Include="Protocol\LogisticsInfo.proto" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Compeng.PEQP.Facade.xml">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+</Project>

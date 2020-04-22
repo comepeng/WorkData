@@ -1,0 +1,21 @@
+syntax = "proto3";
+package Compeng.PEQP;
+
+service CancelOrder {
+    rpc Cancel (CancelOrderRequest) returns (CancelExpressBackResponse) {}
+}
+//取消订单请求类
+message CancelOrderRequest {
+    string OrderCode = 1; //订单编号
+    string ShipperCode = 2; //快递公司编码
+    string LogisticCode = 3; //快递单号
+    string CustomerName = 4; //电子面单客户号
+    string CustomerPwd=5;//电子面单密码
+}
+//取消订单返回
+message CancelExpressBackResponse {
+    string EBusinessID = 1; //用户ID
+    string Reason = 2; //原因
+    bool Success = 3; //成功与否(true/false)
+    int32 ResultCode = 4; //返回编码,100成功,101缺少必要参数,102校验问题,103用户问题,104重复下单问题,105其他问题
+}

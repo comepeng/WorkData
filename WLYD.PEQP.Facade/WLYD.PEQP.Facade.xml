@@ -1,0 +1,1476 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Compeng.PEQP.Facade</name>
+    </assembly>
+    <members>
+        <member name="T:Compeng.PEQP.CancelOrderReflection">
+            <summary>Holder for reflection information generated from Protocol/CancelOrder.proto</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CancelOrderReflection.Descriptor">
+            <summary>File descriptor for Protocol/CancelOrder.proto</summary>
+        </member>
+        <member name="T:Compeng.PEQP.CancelOrderRequest">
+             <summary>
+            取消订单请求类
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CancelOrderRequest.OrderCodeFieldNumber">
+            <summary>Field number for the "OrderCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CancelOrderRequest.OrderCode">
+             <summary>
+            订单编号
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CancelOrderRequest.ShipperCodeFieldNumber">
+            <summary>Field number for the "ShipperCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CancelOrderRequest.ShipperCode">
+             <summary>
+            快递公司编码
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CancelOrderRequest.LogisticCodeFieldNumber">
+            <summary>Field number for the "LogisticCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CancelOrderRequest.LogisticCode">
+             <summary>
+            快递单号
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CancelOrderRequest.CustomerNameFieldNumber">
+            <summary>Field number for the "CustomerName" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CancelOrderRequest.CustomerName">
+             <summary>
+            电子面单客户号
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CancelOrderRequest.CustomerPwdFieldNumber">
+            <summary>Field number for the "CustomerPwd" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CancelOrderRequest.CustomerPwd">
+             <summary>
+            电子面单密码
+             </summary>
+        </member>
+        <member name="T:Compeng.PEQP.CancelExpressBackResponse">
+             <summary>
+            取消订单返回
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CancelExpressBackResponse.EBusinessIDFieldNumber">
+            <summary>Field number for the "EBusinessID" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CancelExpressBackResponse.EBusinessID">
+             <summary>
+            用户ID
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CancelExpressBackResponse.ReasonFieldNumber">
+            <summary>Field number for the "Reason" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CancelExpressBackResponse.Reason">
+             <summary>
+            原因
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CancelExpressBackResponse.SuccessFieldNumber">
+            <summary>Field number for the "Success" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CancelExpressBackResponse.Success">
+             <summary>
+            成功与否(true/false)
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CancelExpressBackResponse.ResultCodeFieldNumber">
+            <summary>Field number for the "ResultCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CancelExpressBackResponse.ResultCode">
+             <summary>
+            返回编码,100成功,101缺少必要参数,102校验问题,103用户问题,104重复下单问题,105其他问题
+             </summary>
+        </member>
+        <member name="P:Compeng.PEQP.CancelOrder.Descriptor">
+            <summary>Service descriptor</summary>
+        </member>
+        <member name="T:Compeng.PEQP.CancelOrder.CancelOrderBase">
+            <summary>Base class for server-side implementations of CancelOrder</summary>
+        </member>
+        <member name="T:Compeng.PEQP.CancelOrder.CancelOrderClient">
+            <summary>Client for CancelOrder</summary>
+        </member>
+        <member name="M:Compeng.PEQP.CancelOrder.CancelOrderClient.#ctor(Grpc.Core.ChannelBase)">
+            <summary>Creates a new client for CancelOrder</summary>
+            <param name="channel">The channel to use to make remote calls.</param>
+        </member>
+        <member name="M:Compeng.PEQP.CancelOrder.CancelOrderClient.#ctor(Grpc.Core.CallInvoker)">
+            <summary>Creates a new client for CancelOrder that uses a custom <c>CallInvoker</c>.</summary>
+            <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+        </member>
+        <member name="M:Compeng.PEQP.CancelOrder.CancelOrderClient.#ctor">
+            <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+        </member>
+        <member name="M:Compeng.PEQP.CancelOrder.CancelOrderClient.#ctor(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Protected constructor to allow creation of configured clients.</summary>
+            <param name="configuration">The client configuration.</param>
+        </member>
+        <member name="M:Compeng.PEQP.CancelOrder.CancelOrderClient.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+        </member>
+        <member name="M:Compeng.PEQP.CancelOrder.BindService(Compeng.PEQP.CancelOrder.CancelOrderBase)">
+            <summary>Creates service definition that can be registered with a server</summary>
+            <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+        </member>
+        <member name="M:Compeng.PEQP.CancelOrder.BindService(Grpc.Core.ServiceBinderBase,Compeng.PEQP.CancelOrder.CancelOrderBase)">
+            <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+            Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+            <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+            <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+        </member>
+        <member name="T:Compeng.PEQP.CreateOrderReflection">
+            <summary>Holder for reflection information generated from Protocol/CreateOrder.proto</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderReflection.Descriptor">
+            <summary>File descriptor for Protocol/CreateOrder.proto</summary>
+        </member>
+        <member name="T:Compeng.PEQP.CreateOrderRequest">
+             <summary>
+            创建电子面单请求类
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderRequest.CallbackFieldNumber">
+            <summary>Field number for the "Callback" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderRequest.Callback">
+             <summary>
+            用户自定义回传字段
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderRequest.MemberIDFieldNumber">
+            <summary>Field number for the "MemberID" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderRequest.MemberID">
+             <summary>
+            ERP 系统、电商平台等系统或平台类型用户的会员 ID 或店铺账号等唯一性标识，用于区分其用户
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderRequest.CustomerNameFieldNumber">
+            <summary>Field number for the "CustomerName" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderRequest.CustomerName">
+            <summary>
+            ShipperCode为SF可不填,电子面单客户账号
+            </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderRequest.CustomerPwdFieldNumber">
+            <summary>Field number for the "CustomerPwd" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderRequest.CustomerPwd">
+            <summary>
+            ShipperCode为SF可不填,电子面单客户密码
+            </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderRequest.SendSiteFieldNumber">
+            <summary>Field number for the "SendSite" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderRequest.SendSite">
+             <summary>
+            网点名称
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderRequest.MonthCodeFieldNumber">
+            <summary>Field number for the "MonthCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderRequest.MonthCode">
+             <summary>
+            ShipperCode为SF,月结卡号必填
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderRequest.CustomAreaFieldNumber">
+            <summary>Field number for the "CustomArea" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderRequest.CustomArea">
+             <summary>
+            商家自定义区域
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderRequest.WareHouseIDFieldNumber">
+            <summary>Field number for the "WareHouseID" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderRequest.WareHouseID">
+             <summary>
+            发货仓编码(ShipperCode 为JDKY 时必填)
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderRequest.TransTypeFieldNumber">
+            <summary>Field number for the "TransType" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderRequest.TransType">
+             <summary>
+            运输方式1-陆运，2-空运，不填默认为1
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderRequest.ShipperCodeFieldNumber">
+            <summary>Field number for the "ShipperCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderRequest.ShipperCode">
+            <summary>
+            快递公司编码必填,填写范围:YTO(圆通),SF(顺丰),STO(申通),ZTO(中通)
+            </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderRequest.LogisticCodeFieldNumber">
+            <summary>Field number for the "LogisticCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderRequest.LogisticCode">
+             <summary>
+            快递单号(仅宅急送可用)
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderRequest.ThOrderCodeFieldNumber">
+            <summary>Field number for the "ThOrderCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderRequest.ThOrderCode">
+             <summary>
+            第三方订单号(ShipperCode 为 JD 且ExpType 为 1 时必填)
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderRequest.OrderCodeFieldNumber">
+            <summary>Field number for the "OrderCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderRequest.OrderCode">
+             <summary>
+            订单编号（自定义，不可重复）
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderRequest.PayTypeFieldNumber">
+            <summary>Field number for the "PayType" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderRequest.PayType">
+             <summary>
+            运费支付方式：1-现付，2-到付，3-月结，4-第三方付(仅 SF、KYSY 支持)
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderRequest.ExpTypeFieldNumber">
+            <summary>Field number for the "ExpType" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderRequest.ExpType">
+            <summary>
+            快递公司业务类型
+            </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderRequest.IsReturnSignBillFieldNumber">
+            <summary>Field number for the "IsReturnSignBill" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderRequest.IsReturnSignBill">
+             <summary>
+            是否要求签回单 0-不要求，1-要求
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderRequest.OperateRequireFieldNumber">
+            <summary>Field number for the "OperateRequire" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderRequest.OperateRequire">
+             <summary>
+            签回单操作要求(如：签名、盖章、身份证复印件等)
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderRequest.CostFieldNumber">
+            <summary>Field number for the "Cost" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderRequest.Cost">
+             <summary>
+            快递运费 类型：decimal
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderRequest.OtherCostFieldNumber">
+            <summary>Field number for the "OtherCost" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderRequest.OtherCost">
+             <summary>
+            其他费用 类型：decimal
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderRequest.ReceiverFieldNumber">
+            <summary>Field number for the "Receiver" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderRequest.Receiver">
+             <summary>
+            收件人信息
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderRequest.SenderFieldNumber">
+            <summary>Field number for the "Sender" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderRequest.Sender">
+             <summary>
+            发件人信息
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderRequest.IsNoticeFieldNumber">
+            <summary>Field number for the "IsNotice" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderRequest.IsNotice">
+             <summary>
+            是否通知快递员上门揽件 0-通知，1-不通知，不填则默认为 1
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderRequest.StartDateFieldNumber">
+            <summary>Field number for the "StartDate" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderRequest.StartDate">
+             <summary>
+            上门揽件时间段，格式：YYYY-MM-DD HH24:MM:SS
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderRequest.EndDateFieldNumber">
+            <summary>Field number for the "EndDate" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderRequest.EndDate">
+             <summary>
+            上门揽件时间段，格式：YYYY-MM-DD HH24:MM:SS
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderRequest.WeightFieldNumber">
+            <summary>Field number for the "Weight" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderRequest.Weight">
+             <summary>
+            包裹重量 类型：decimal
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderRequest.QuantityFieldNumber">
+            <summary>Field number for the "Quantity" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderRequest.Quantity">
+             <summary>
+            包裹数
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderRequest.VolumeFieldNumber">
+            <summary>Field number for the "Volume" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderRequest.Volume">
+             <summary>
+            体积 类型：decimal
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderRequest.RemarkFieldNumber">
+            <summary>Field number for the "Remark" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderRequest.Remark">
+             <summary>
+            备注
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderRequest.AddServiceFieldNumber">
+            <summary>Field number for the "AddService" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderRequest.AddService">
+             <summary>
+            增值服务
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderRequest.CommodityFieldNumber">
+            <summary>Field number for the "Commodity" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderRequest.Commodity">
+             <summary>
+            包裹体积
+             </summary>
+        </member>
+        <member name="T:Compeng.PEQP.ExpressReceiver">
+             <summary>
+            收件人信息
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressReceiver.CompanyFieldNumber">
+            <summary>Field number for the "Company" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressReceiver.Company">
+             <summary>
+            收件人公司
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressReceiver.NameFieldNumber">
+            <summary>Field number for the "Name" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressReceiver.Name">
+             <summary>
+            收件人姓名
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressReceiver.TelFieldNumber">
+            <summary>Field number for the "Tel" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressReceiver.Tel">
+             <summary>
+            收件人电话
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressReceiver.MobileFieldNumber">
+            <summary>Field number for the "Mobile" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressReceiver.Mobile">
+             <summary>
+            收件人电话
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressReceiver.PostCodeFieldNumber">
+            <summary>Field number for the "PostCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressReceiver.PostCode">
+             <summary>
+            收件地邮编（(ShipperCode 为EMS、YZPY、YZBK 时必填)）
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressReceiver.ProvinceNameFieldNumber">
+            <summary>Field number for the "ProvinceName" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressReceiver.ProvinceName">
+             <summary>
+            收件省
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressReceiver.CityNameFieldNumber">
+            <summary>Field number for the "CityName" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressReceiver.CityName">
+             <summary>
+            收件市
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressReceiver.ExpAreaNameFieldNumber">
+            <summary>Field number for the "ExpAreaName" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressReceiver.ExpAreaName">
+             <summary>
+            收件区/县
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressReceiver.AddressFieldNumber">
+            <summary>Field number for the "Address" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressReceiver.Address">
+             <summary>
+            收件人详细地址
+             </summary>
+        </member>
+        <member name="T:Compeng.PEQP.ExpressSender">
+             <summary>
+            发件人信息
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressSender.CompanyFieldNumber">
+            <summary>Field number for the "Company" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressSender.Company">
+             <summary>
+            发件人公司
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressSender.NameFieldNumber">
+            <summary>Field number for the "Name" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressSender.Name">
+             <summary>
+            发件人姓名
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressSender.TelFieldNumber">
+            <summary>Field number for the "Tel" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressSender.Tel">
+             <summary>
+            发件人电话
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressSender.MobileFieldNumber">
+            <summary>Field number for the "Mobile" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressSender.Mobile">
+             <summary>
+            发件人电话
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressSender.PostCodeFieldNumber">
+            <summary>Field number for the "PostCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressSender.PostCode">
+             <summary>
+            发件人邮编(ShipperCode 为EMS、YZPY、YZBK 时必填)
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressSender.ProvinceNameFieldNumber">
+            <summary>Field number for the "ProvinceName" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressSender.ProvinceName">
+             <summary>
+            发件省
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressSender.CityNameFieldNumber">
+            <summary>Field number for the "CityName" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressSender.CityName">
+             <summary>
+            发件市
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressSender.ExpAreaNameFieldNumber">
+            <summary>Field number for the "ExpAreaName" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressSender.ExpAreaName">
+             <summary>
+            发件区/县
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressSender.AddressFieldNumber">
+            <summary>Field number for the "Address" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressSender.Address">
+             <summary>
+            发件人详细地址
+             </summary>
+        </member>
+        <member name="T:Compeng.PEQP.ExpressAddService">
+             <summary>
+            增值服务
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressAddService.NameFieldNumber">
+            <summary>Field number for the "Name" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressAddService.Name">
+             <summary>
+            增值服务名称
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressAddService.ValueFieldNumber">
+            <summary>Field number for the "Value" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressAddService.Value">
+             <summary>
+            增值服务值
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressAddService.CustomerIDFieldNumber">
+            <summary>Field number for the "CustomerID" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressAddService.CustomerID">
+             <summary>
+            客户标识
+             </summary>
+        </member>
+        <member name="T:Compeng.PEQP.ExpressCommodity">
+             <summary>
+            商品信息
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressCommodity.GoodsNameFieldNumber">
+            <summary>Field number for the "GoodsName" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressCommodity.GoodsName">
+             <summary>
+            商品名称
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressCommodity.GoodsCodeFieldNumber">
+            <summary>Field number for the "GoodsCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressCommodity.GoodsCode">
+             <summary>
+            商品编码
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressCommodity.GoodsQuantityFieldNumber">
+            <summary>Field number for the "GoodsQuantity" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressCommodity.GoodsQuantity">
+             <summary>
+            商品件数
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressCommodity.GoodsPriceFieldNumber">
+            <summary>Field number for the "GoodsPrice" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressCommodity.GoodsPrice">
+             <summary>
+            商品价格 类型：decimal
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressCommodity.GoodsWeightFieldNumber">
+            <summary>Field number for the "GoodsWeight" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressCommodity.GoodsWeight">
+             <summary>
+            商品重量 类型  deciaml
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressCommodity.GoodsDescFieldNumber">
+            <summary>Field number for the "GoodsDesc" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressCommodity.GoodsDesc">
+             <summary>
+            商品描述
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressCommodity.GoodsVolFieldNumber">
+            <summary>Field number for the "GoodsVol" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressCommodity.GoodsVol">
+             <summary>
+            商品体积
+             </summary>
+        </member>
+        <member name="T:Compeng.PEQP.CreateOrderResponse">
+             <summary>
+            创建电子面单响应
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderResponse.EBusinessIDFieldNumber">
+            <summary>Field number for the "EBusinessID" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderResponse.EBusinessID">
+             <summary>
+            用户ID
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderResponse.ReasonFieldNumber">
+            <summary>Field number for the "Reason" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderResponse.Reason">
+             <summary>
+            错误原因
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderResponse.SuccessFieldNumber">
+            <summary>Field number for the "Success" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderResponse.Success">
+             <summary>
+            成功与否(true/false)
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderResponse.ResultCodeFieldNumber">
+            <summary>Field number for the "ResultCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderResponse.ResultCode">
+             <summary>
+            返回编码,100成功,101缺少必要参数,102校验问题,103用户问题,104重复下单问题,105其他问题
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderResponse.UniquerRequestNumberFieldNumber">
+            <summary>Field number for the "UniquerRequestNumber" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderResponse.UniquerRequestNumber">
+             <summary>
+            唯一标识
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderResponse.EstimateDeliveryTimeFieldNumber">
+            <summary>Field number for the "EstimateDeliveryTime" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderResponse.EstimateDeliveryTime">
+             <summary>
+            订单预计到货时间
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.CreateOrderResponse.OrderFieldNumber">
+            <summary>Field number for the "Order" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrderResponse.Order">
+             <summary>
+            运单信息
+             </summary>
+        </member>
+        <member name="T:Compeng.PEQP.ExpressOrder">
+             <summary>
+            运单信息
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressOrder.OrderCodeFieldNumber">
+            <summary>Field number for the "OrderCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressOrder.OrderCode">
+             <summary>
+            订单编号
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressOrder.ShipperCodeFieldNumber">
+            <summary>Field number for the "ShipperCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressOrder.ShipperCode">
+             <summary>
+            快递公司编码
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressOrder.LogisticCodeFieldNumber">
+            <summary>Field number for the "LogisticCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressOrder.LogisticCode">
+             <summary>
+            快递单号
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressOrder.MarkDestinationFieldNumber">
+            <summary>Field number for the "MarkDestination" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressOrder.MarkDestination">
+             <summary>
+            大头笔
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressOrder.SignWaybillCodeFieldNumber">
+            <summary>Field number for the "SignWaybillCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressOrder.SignWaybillCode">
+             <summary>
+            签回单号
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressOrder.OriginCodeFieldNumber">
+            <summary>Field number for the "OriginCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressOrder.OriginCode">
+             <summary>
+            始发地区域编码
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressOrder.OriginNameFieldNumber">
+            <summary>Field number for the "OriginName" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressOrder.OriginName">
+             <summary>
+            始发地/始发网点
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressOrder.DestinationCodeFieldNumber">
+            <summary>Field number for the "DestinationCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressOrder.DestinationCode">
+             <summary>
+            目的地区域编码
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressOrder.DestinationNameFieldNumber">
+            <summary>Field number for the "DestinationName" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressOrder.DestinationName">
+             <summary>
+            目的地/到达网点
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressOrder.SortingCodeFieldNumber">
+            <summary>Field number for the "SortingCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressOrder.SortingCode">
+             <summary>
+            分拣编码
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressOrder.PackageCodeFieldNumber">
+            <summary>Field number for the "PackageCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressOrder.PackageCode">
+             <summary>
+            集包编码
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressOrder.PackageNameFieldNumber">
+            <summary>Field number for the "PackageName" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressOrder.PackageName">
+             <summary>
+            集包地
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressOrder.DestinationAllocationCentreFieldNumber">
+            <summary>Field number for the "DestinationAllocationCentre" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressOrder.DestinationAllocationCentre">
+             <summary>
+            目的地分拨
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressOrder.QRcodeFieldNumber">
+            <summary>Field number for the "QRcode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressOrder.QRcode">
+             <summary>
+            二维码信息
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressOrder.ShipperInfoFieldNumber">
+            <summary>Field number for the "ShipperInfo" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressOrder.ShipperInfo">
+             <summary>
+            快递托运面单信息
+             </summary>
+        </member>
+        <member name="T:Compeng.PEQP.ExpressShipperInfo">
+            <summary>
+            快递托运面单信息
+            </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressShipperInfo.LogisticCodeFieldNumber">
+            <summary>Field number for the "LogisticCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressShipperInfo.LogisticCode">
+             <summary>
+            快递单号
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressShipperInfo.OriginTransferCodeFieldNumber">
+            <summary>Field number for the "OriginTransferCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressShipperInfo.OriginTransferCode">
+             <summary>
+            原寄中转场
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressShipperInfo.OriginCityCodeFieldNumber">
+            <summary>Field number for the "OriginCityCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressShipperInfo.OriginCityCode">
+             <summary>
+            原寄地城市代码
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressShipperInfo.OriginDeptCodeFieldNumber">
+            <summary>Field number for the "OriginDeptCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressShipperInfo.OriginDeptCode">
+             <summary>
+            原寄地网点代码
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressShipperInfo.OriginTeamCodeFieldNumber">
+            <summary>Field number for the "OriginTeamCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressShipperInfo.OriginTeamCode">
+             <summary>
+            原寄地单元区域
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressShipperInfo.DestCityCodeFieldNumber">
+            <summary>Field number for the "DestCityCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressShipperInfo.DestCityCode">
+             <summary>
+            目的地城市代码
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressShipperInfo.DestDeptCodeFieldNumber">
+            <summary>Field number for the "DestDeptCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressShipperInfo.DestDeptCode">
+             <summary>
+            目的地网点代码
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressShipperInfo.DestDeptCodeMappingFieldNumber">
+            <summary>Field number for the "DestDeptCodeMapping" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressShipperInfo.DestDeptCodeMapping">
+             <summary>
+            目的地网点代码映射码
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressShipperInfo.DestTeamCodeFieldNumber">
+            <summary>Field number for the "DestTeamCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressShipperInfo.DestTeamCode">
+             <summary>
+            目的地单元区域
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressShipperInfo.DestTeamCodeMappingFieldNumber">
+            <summary>Field number for the "DestTeamCodeMapping" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressShipperInfo.DestTeamCodeMapping">
+            <summary>
+            目的地单元区域映射码
+            </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressShipperInfo.DestTransferCodeFieldNumber">
+            <summary>Field number for the "DestTransferCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressShipperInfo.DestTransferCode">
+             <summary>
+            目的地中转场
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressShipperInfo.DestRouteLabelFieldNumber">
+            <summary>Field number for the "DestRouteLabel" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressShipperInfo.DestRouteLabel">
+             <summary>
+            打单时的路由标签信息
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressShipperInfo.CodingMappingFieldNumber">
+            <summary>Field number for the "CodingMapping" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressShipperInfo.CodingMapping">
+             <summary>
+            入港映射码
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressShipperInfo.CodingMappingOutFieldNumber">
+            <summary>Field number for the "CodingMappingOut" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressShipperInfo.CodingMappingOut">
+             <summary>
+            出港映射码
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressShipperInfo.XbFlagFieldNumber">
+            <summary>Field number for the "XbFlag" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressShipperInfo.XbFlag">
+             <summary>
+            XB 标志0:不需要打印1:需要打印
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressShipperInfo.PrintFlagFieldNumber">
+            <summary>Field number for the "PrintFlag" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressShipperInfo.PrintFlag">
+             <summary>
+            打印标志
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressShipperInfo.TwoDimensionCodeFieldNumber">
+            <summary>Field number for the "TwoDimensionCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressShipperInfo.TwoDimensionCode">
+             <summary>
+            二维码
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressShipperInfo.ProCodeFieldNumber">
+            <summary>Field number for the "ProCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressShipperInfo.ProCode">
+            <summary>
+            时效类型:值为二维码中的 K4
+            </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressShipperInfo.PrintIconFieldNumber">
+            <summary>Field number for the "PrintIcon" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressShipperInfo.PrintIcon">
+             <summary>
+            打印图标
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressShipperInfo.AbFlagFieldNumber">
+            <summary>Field number for the "AbFlag" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressShipperInfo.AbFlag">
+             <summary>
+            Ab 标
+             </summary>
+        </member>
+        <member name="P:Compeng.PEQP.CreateOrder.Descriptor">
+            <summary>Service descriptor</summary>
+        </member>
+        <member name="T:Compeng.PEQP.CreateOrder.CreateOrderBase">
+            <summary>Base class for server-side implementations of CreateOrder</summary>
+        </member>
+        <member name="T:Compeng.PEQP.CreateOrder.CreateOrderClient">
+            <summary>Client for CreateOrder</summary>
+        </member>
+        <member name="M:Compeng.PEQP.CreateOrder.CreateOrderClient.#ctor(Grpc.Core.ChannelBase)">
+            <summary>Creates a new client for CreateOrder</summary>
+            <param name="channel">The channel to use to make remote calls.</param>
+        </member>
+        <member name="M:Compeng.PEQP.CreateOrder.CreateOrderClient.#ctor(Grpc.Core.CallInvoker)">
+            <summary>Creates a new client for CreateOrder that uses a custom <c>CallInvoker</c>.</summary>
+            <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+        </member>
+        <member name="M:Compeng.PEQP.CreateOrder.CreateOrderClient.#ctor">
+            <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+        </member>
+        <member name="M:Compeng.PEQP.CreateOrder.CreateOrderClient.#ctor(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Protected constructor to allow creation of configured clients.</summary>
+            <param name="configuration">The client configuration.</param>
+        </member>
+        <member name="M:Compeng.PEQP.CreateOrder.CreateOrderClient.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+        </member>
+        <member name="M:Compeng.PEQP.CreateOrder.BindService(Compeng.PEQP.CreateOrder.CreateOrderBase)">
+            <summary>Creates service definition that can be registered with a server</summary>
+            <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+        </member>
+        <member name="M:Compeng.PEQP.CreateOrder.BindService(Grpc.Core.ServiceBinderBase,Compeng.PEQP.CreateOrder.CreateOrderBase)">
+            <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+            Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+            <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+            <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+        </member>
+        <member name="T:Compeng.PEQP.GetChildrenOrderReflection">
+            <summary>Holder for reflection information generated from Protocol/GetChildrenOrder.proto</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetChildrenOrderReflection.Descriptor">
+            <summary>File descriptor for Protocol/GetChildrenOrder.proto</summary>
+        </member>
+        <member name="T:Compeng.PEQP.GetChildOrderRequest">
+             <summary>
+            获取子单请求类
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.GetChildOrderRequest.OrderCodeFieldNumber">
+            <summary>Field number for the "OrderCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetChildOrderRequest.OrderCode">
+             <summary>
+            订单编号
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.GetChildOrderRequest.ShipperCodeFieldNumber">
+            <summary>Field number for the "ShipperCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetChildOrderRequest.ShipperCode">
+             <summary>
+            快递公司编码
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.GetChildOrderRequest.ParcelQuantityFieldNumber">
+            <summary>Field number for the "ParcelQuantity" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetChildOrderRequest.ParcelQuantity">
+             <summary>
+            新增加的包裹数，不超过100
+             </summary>
+        </member>
+        <member name="T:Compeng.PEQP.GetChildOrderResponse">
+             <summary>
+            获取子单返回
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.GetChildOrderResponse.OrderCodeFieldNumber">
+            <summary>Field number for the "OrderCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetChildOrderResponse.OrderCode">
+             <summary>
+            客户订单号
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.GetChildOrderResponse.EBusinessIDFieldNumber">
+            <summary>Field number for the "EBusinessID" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetChildOrderResponse.EBusinessID">
+             <summary>
+            用户I
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.GetChildOrderResponse.MainLogisticCodeFieldNumber">
+            <summary>Field number for the "MainLogisticCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetChildOrderResponse.MainLogisticCode">
+             <summary>
+            母运单号
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.GetChildOrderResponse.ZDLogisticCodesFieldNumber">
+            <summary>Field number for the "ZDLogisticCodes" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetChildOrderResponse.ZDLogisticCodes">
+             <summary>
+            新增的子运单号，可以多个，以英文逗号隔开
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.GetChildOrderResponse.ReasonFieldNumber">
+            <summary>Field number for the "Reason" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetChildOrderResponse.Reason">
+             <summary>
+            原因
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.GetChildOrderResponse.SuccessFieldNumber">
+            <summary>Field number for the "Success" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetChildOrderResponse.Success">
+             <summary>
+            成功与否(true/false)
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.GetChildOrderResponse.ResultCodeFieldNumber">
+            <summary>Field number for the "ResultCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetChildOrderResponse.ResultCode">
+             <summary>
+            返回编码,100成功,101缺少必要参数,102校验问题,103用户问题,104重复下单问题,105其他问题
+             </summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetChildOrder.Descriptor">
+            <summary>Service descriptor</summary>
+        </member>
+        <member name="T:Compeng.PEQP.GetChildOrder.GetChildOrderBase">
+            <summary>Base class for server-side implementations of GetChildOrder</summary>
+        </member>
+        <member name="T:Compeng.PEQP.GetChildOrder.GetChildOrderClient">
+            <summary>Client for GetChildOrder</summary>
+        </member>
+        <member name="M:Compeng.PEQP.GetChildOrder.GetChildOrderClient.#ctor(Grpc.Core.ChannelBase)">
+            <summary>Creates a new client for GetChildOrder</summary>
+            <param name="channel">The channel to use to make remote calls.</param>
+        </member>
+        <member name="M:Compeng.PEQP.GetChildOrder.GetChildOrderClient.#ctor(Grpc.Core.CallInvoker)">
+            <summary>Creates a new client for GetChildOrder that uses a custom <c>CallInvoker</c>.</summary>
+            <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+        </member>
+        <member name="M:Compeng.PEQP.GetChildOrder.GetChildOrderClient.#ctor">
+            <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+        </member>
+        <member name="M:Compeng.PEQP.GetChildOrder.GetChildOrderClient.#ctor(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Protected constructor to allow creation of configured clients.</summary>
+            <param name="configuration">The client configuration.</param>
+        </member>
+        <member name="M:Compeng.PEQP.GetChildOrder.GetChildOrderClient.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+        </member>
+        <member name="M:Compeng.PEQP.GetChildOrder.BindService(Compeng.PEQP.GetChildOrder.GetChildOrderBase)">
+            <summary>Creates service definition that can be registered with a server</summary>
+            <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+        </member>
+        <member name="M:Compeng.PEQP.GetChildOrder.BindService(Grpc.Core.ServiceBinderBase,Compeng.PEQP.GetChildOrder.GetChildOrderBase)">
+            <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+            Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+            <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+            <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+        </member>
+        <member name="T:Compeng.PEQP.GetWaybillInfoReflection">
+            <summary>Holder for reflection information generated from Protocol/GetWaybillInfo.proto</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetWaybillInfoReflection.Descriptor">
+            <summary>File descriptor for Protocol/GetWaybillInfo.proto</summary>
+        </member>
+        <member name="T:Compeng.PEQP.GetWaybillInfoRequest">
+             <summary>
+            运单信息查询请求类
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.GetWaybillInfoRequest.WaybillNoFieldNumber">
+            <summary>Field number for the "WaybillNo" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetWaybillInfoRequest.WaybillNo">
+             <summary>
+            顺丰运单号
+             </summary>
+        </member>
+        <member name="T:Compeng.PEQP.GetWaybillInfoResponse">
+             <summary>
+            运单信息查询返回
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.GetWaybillInfoResponse.ReasonFieldNumber">
+            <summary>Field number for the "Reason" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetWaybillInfoResponse.Reason">
+             <summary>
+            原因
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.GetWaybillInfoResponse.SuccessFieldNumber">
+            <summary>Field number for the "Success" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetWaybillInfoResponse.Success">
+             <summary>
+            (成功true/失败false)
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.GetWaybillInfoResponse.ResultCodeFieldNumber">
+            <summary>Field number for the "ResultCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetWaybillInfoResponse.ResultCode">
+             <summary>
+            返回编码,100成功,101缺少必要参数,102校验问题,103用户问题,104重复下单问题,105其他问题
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.GetWaybillInfoResponse.SenderFieldNumber">
+            <summary>Field number for the "Sender" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetWaybillInfoResponse.Sender">
+             <summary>
+            发货人姓名
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.GetWaybillInfoResponse.SenderPhoneFieldNumber">
+            <summary>Field number for the "SenderPhone" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetWaybillInfoResponse.SenderPhone">
+             <summary>
+            发货人电话
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.GetWaybillInfoResponse.SenderMobileFieldNumber">
+            <summary>Field number for the "SenderMobile" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetWaybillInfoResponse.SenderMobile">
+             <summary>
+            发货人手机号
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.GetWaybillInfoResponse.ReceiverFieldNumber">
+            <summary>Field number for the "Receiver" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetWaybillInfoResponse.Receiver">
+             <summary>
+            收货人姓名
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.GetWaybillInfoResponse.ReceiverPhoneFieldNumber">
+            <summary>Field number for the "ReceiverPhone" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetWaybillInfoResponse.ReceiverPhone">
+             <summary>
+            收货人电话
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.GetWaybillInfoResponse.ReceiverMobileFieldNumber">
+            <summary>Field number for the "ReceiverMobile" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetWaybillInfoResponse.ReceiverMobile">
+             <summary>
+            收货人手机
+             </summary>
+        </member>
+        <member name="T:Compeng.PEQP.GetWaybillInfo">
+             <summary>
+            运单信息查询
+             </summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetWaybillInfo.Descriptor">
+            <summary>Service descriptor</summary>
+        </member>
+        <member name="T:Compeng.PEQP.GetWaybillInfo.GetWaybillInfoBase">
+            <summary>Base class for server-side implementations of GetWaybillInfo</summary>
+        </member>
+        <member name="T:Compeng.PEQP.GetWaybillInfo.GetWaybillInfoClient">
+            <summary>Client for GetWaybillInfo</summary>
+        </member>
+        <member name="M:Compeng.PEQP.GetWaybillInfo.GetWaybillInfoClient.#ctor(Grpc.Core.ChannelBase)">
+            <summary>Creates a new client for GetWaybillInfo</summary>
+            <param name="channel">The channel to use to make remote calls.</param>
+        </member>
+        <member name="M:Compeng.PEQP.GetWaybillInfo.GetWaybillInfoClient.#ctor(Grpc.Core.CallInvoker)">
+            <summary>Creates a new client for GetWaybillInfo that uses a custom <c>CallInvoker</c>.</summary>
+            <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+        </member>
+        <member name="M:Compeng.PEQP.GetWaybillInfo.GetWaybillInfoClient.#ctor">
+            <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+        </member>
+        <member name="M:Compeng.PEQP.GetWaybillInfo.GetWaybillInfoClient.#ctor(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Protected constructor to allow creation of configured clients.</summary>
+            <param name="configuration">The client configuration.</param>
+        </member>
+        <member name="M:Compeng.PEQP.GetWaybillInfo.GetWaybillInfoClient.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+        </member>
+        <member name="M:Compeng.PEQP.GetWaybillInfo.BindService(Compeng.PEQP.GetWaybillInfo.GetWaybillInfoBase)">
+            <summary>Creates service definition that can be registered with a server</summary>
+            <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+        </member>
+        <member name="M:Compeng.PEQP.GetWaybillInfo.BindService(Grpc.Core.ServiceBinderBase,Compeng.PEQP.GetWaybillInfo.GetWaybillInfoBase)">
+            <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+            Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+            <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+            <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+        </member>
+        <member name="T:Compeng.PEQP.LogisticsInfoReflection">
+            <summary>Holder for reflection information generated from Protocol/LogisticsInfo.proto</summary>
+        </member>
+        <member name="P:Compeng.PEQP.LogisticsInfoReflection.Descriptor">
+            <summary>File descriptor for Protocol/LogisticsInfo.proto</summary>
+        </member>
+        <member name="T:Compeng.PEQP.GetLogisticsRequest">
+             <summary>
+            物流信息请求
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.GetLogisticsRequest.OrderCodeFieldNumber">
+            <summary>Field number for the "OrderCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetLogisticsRequest.OrderCode">
+             <summary>
+            订单编号
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.GetLogisticsRequest.CustomerNameFieldNumber">
+            <summary>Field number for the "CustomerName" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetLogisticsRequest.CustomerName">
+             <summary>
+            为 JD和SF时必填；ShipperCode 为其他快递时，不填
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.GetLogisticsRequest.ShipperCodeFieldNumber">
+            <summary>Field number for the "ShipperCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetLogisticsRequest.ShipperCode">
+             <summary>
+            快递公司编码必填,填写范围:YTO(圆通),SF(顺丰),STO(申通),ZTO(中通)
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.GetLogisticsRequest.LogisticCodeFieldNumber">
+            <summary>Field number for the "LogisticCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetLogisticsRequest.LogisticCode">
+            <summary>
+            快递单号
+            </summary>
+        </member>
+        <member name="T:Compeng.PEQP.GetLogisticsResponse">
+             <summary>
+            物流信息响应
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.GetLogisticsResponse.EBusinessIDFieldNumber">
+            <summary>Field number for the "EBusinessID" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetLogisticsResponse.EBusinessID">
+             <summary>
+            用户ID
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.GetLogisticsResponse.OrderCodeFieldNumber">
+            <summary>Field number for the "OrderCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetLogisticsResponse.OrderCode">
+             <summary>
+            订单编号
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.GetLogisticsResponse.ShipperCodeFieldNumber">
+            <summary>Field number for the "ShipperCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetLogisticsResponse.ShipperCode">
+             <summary>
+            快递公司编码
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.GetLogisticsResponse.LogisticCodeFieldNumber">
+            <summary>Field number for the "LogisticCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetLogisticsResponse.LogisticCode">
+             <summary>
+            快递单号
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.GetLogisticsResponse.SuccessFieldNumber">
+            <summary>Field number for the "Success" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetLogisticsResponse.Success">
+             <summary>
+            成功与否
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.GetLogisticsResponse.ReasonFieldNumber">
+            <summary>Field number for the "Reason" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetLogisticsResponse.Reason">
+             <summary>
+            失败原因
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.GetLogisticsResponse.ResultCodeFieldNumber">
+            <summary>Field number for the "ResultCode" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetLogisticsResponse.ResultCode">
+             <summary>
+            返回编码
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.GetLogisticsResponse.TracesFieldNumber">
+            <summary>Field number for the "Traces" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetLogisticsResponse.Traces">
+             <summary>
+            物流轨迹详情  
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressTraceInfo.AcceptTimeFieldNumber">
+            <summary>Field number for the "AcceptTime" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressTraceInfo.AcceptTime">
+             <summary>
+            轨迹发生时间
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressTraceInfo.AcceptStationFieldNumber">
+            <summary>Field number for the "AcceptStation" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressTraceInfo.AcceptStation">
+             <summary>
+            轨迹描述
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressTraceInfo.LocationFieldNumber">
+            <summary>Field number for the "Location" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressTraceInfo.Location">
+             <summary>
+            当前城市
+             </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressTraceInfo.StatusFieldNumber">
+            <summary>Field number for the "Status" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressTraceInfo.Status">
+            <summary>
+            物流状态：无轨迹 = 0, 已揽收 = 1, 在途中 = 2, 签收 = 3, 问题件 = 4, 派件=202
+            </summary>
+        </member>
+        <member name="F:Compeng.PEQP.ExpressTraceInfo.RemarkFieldNumber">
+            <summary>Field number for the "Remark" field.</summary>
+        </member>
+        <member name="P:Compeng.PEQP.ExpressTraceInfo.Remark">
+             <summary>
+            备注
+             </summary>
+        </member>
+        <member name="P:Compeng.PEQP.GetLogistics.Descriptor">
+            <summary>Service descriptor</summary>
+        </member>
+        <member name="T:Compeng.PEQP.GetLogistics.GetLogisticsBase">
+            <summary>Base class for server-side implementations of GetLogistics</summary>
+        </member>
+        <member name="T:Compeng.PEQP.GetLogistics.GetLogisticsClient">
+            <summary>Client for GetLogistics</summary>
+        </member>
+        <member name="M:Compeng.PEQP.GetLogistics.GetLogisticsClient.#ctor(Grpc.Core.ChannelBase)">
+            <summary>Creates a new client for GetLogistics</summary>
+            <param name="channel">The channel to use to make remote calls.</param>
+        </member>
+        <member name="M:Compeng.PEQP.GetLogistics.GetLogisticsClient.#ctor(Grpc.Core.CallInvoker)">
+            <summary>Creates a new client for GetLogistics that uses a custom <c>CallInvoker</c>.</summary>
+            <param name="callInvoker">The callInvoker to use to make remote calls.</param>
+        </member>
+        <member name="M:Compeng.PEQP.GetLogistics.GetLogisticsClient.#ctor">
+            <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
+        </member>
+        <member name="M:Compeng.PEQP.GetLogistics.GetLogisticsClient.#ctor(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Protected constructor to allow creation of configured clients.</summary>
+            <param name="configuration">The client configuration.</param>
+        </member>
+        <member name="M:Compeng.PEQP.GetLogistics.GetLogisticsClient.NewInstance(Grpc.Core.ClientBase.ClientBaseConfiguration)">
+            <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
+        </member>
+        <member name="M:Compeng.PEQP.GetLogistics.BindService(Compeng.PEQP.GetLogistics.GetLogisticsBase)">
+            <summary>Creates service definition that can be registered with a server</summary>
+            <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+        </member>
+        <member name="M:Compeng.PEQP.GetLogistics.BindService(Grpc.Core.ServiceBinderBase,Compeng.PEQP.GetLogistics.GetLogisticsBase)">
+            <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
+            Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
+            <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
+            <param name="serviceImpl">An object implementing the server-side handling logic.</param>
+        </member>
+    </members>
+</doc>

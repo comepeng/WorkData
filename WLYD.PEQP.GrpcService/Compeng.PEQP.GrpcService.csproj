@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="Grpc.AspNetCore" Version="2.26.0" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Compeng.PEQP.Facade\Compeng.PEQP.Facade.csproj" />
+    <ProjectReference Include="..\Compeng.PEQP.Service\Compeng.PEQP.Service.csproj" />
+    <ProjectReference Include="..\Compeng.Rpc.Server\Compeng.Rpc.Server.csproj" />
+    <ProjectReference Include="..\WLYD.PEQP.Service\Compeng.PEQP.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="nlog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

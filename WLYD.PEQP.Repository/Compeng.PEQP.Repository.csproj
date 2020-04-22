@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.30" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.1.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.1" />
+    <PackageReference Include="MySqlConnector" Version="0.61.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Compeng.PEQP.Dto\Compeng.PEQP.Dto.csproj" />
+    <ProjectReference Include="..\Compeng.PEQP.Model\Compeng.PEQP.Model.csproj" />
+    <ProjectReference Include="..\Compeng.PEQP.Util\Compeng.PEQP.Util.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+
+        <IsPackable>false</IsPackable>
+
+        <LangVersion>latestmajor</LangVersion>
+
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="JetBrains.dotMemoryUnit" Version="3.0.20171219.105559" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="3.1.1" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
+        <PackageReference Include="Shouldly" Version="3.0.2" />
+        <PackageReference Include="xunit" Version="2.4.1" />
+        <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1" />
+        <PackageReference Include="coverlet.collector" Version="1.2.0">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Compeng.PEQP.Util\Compeng.PEQP.Util.csproj" />
+      <ProjectReference Include="..\Compeng.PEQP.WebAPI\Compeng.PEQP.WebAPI.csproj" />
+      <ProjectReference Include="..\WLYD.PEQP.Dto\Compeng.PEQP.Dto.csproj" />
+      <ProjectReference Include="..\WLYD.PEQP.WebAPI\Compeng.PEQP.WebAPI.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="data\DeBangCreateOrder.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="data\ZhongTongCreateOrder.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="data\ShunFengCreateOrder.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="data\YuanTongCreateOrder.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+</Project>

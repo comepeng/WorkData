@@ -1,0 +1,45 @@
+﻿{
+  "ordercode": "01265701384162",
+  "CustomerName": "K21000119",
+  "CustomerPwd": "u2Z1F7Fh",
+  "shippercode": 0,
+  "paytype": 1,
+  "monthcode": "7551234567",
+  "exptype": "1",
+  "cost": 1,
+  "othercost": 1,
+  "sender": {
+    "company": "lv",
+    "name": "taylor",
+    "mobile": "15018442396",
+    "provincename": "上海",
+    "cityname": " 上 海 市 ",
+    "expareaname": "青浦区",
+    "address": "明珠路"
+  },
+  "receiver": {
+    "company": "gccui",
+    "name": "yann",
+    "mobile": "15018442396",
+    "provincename": "北京",
+    "cityname": " 北 京 市 ",
+    "expareaname": "朝阳区",
+    "address": "三里屯街道"
+  },
+  "commodity": [
+    {
+      "goodsname": "鞋子",
+      "goodsquantity": 1,
+      "goodsweight": 1
+    },
+    {
+      "goodsname": "衣服",
+      "goodsquantity": 1,
+      "goodsweight": 1
+    }
+  ],
+  "weight": 1,
+  "quantity": 1,
+  "volume": 0,
+  "remark": "小心轻放"
+}
